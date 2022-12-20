@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/main.dart';
+import 'package:todo_app/widgets/addtodoDialog.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -47,7 +48,20 @@ class _homepageState extends State<homepage> {
             )
         ],
       ),
-      body: Container(),
+      body: tabs[selected],
+      floatingActionButton: FloatingActionButton(
+       child: Icon(Icons.add),
+       shape:RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30)
+       ),
+       backgroundColor: Colors.blue,
+       onPressed: () => showDialog(
+        context: context, 
+        barrierDismissible: false,
+        builder: (BuildContext context)=>new addtodoDialog() ,
+
+        )
+      ),
     );
   }
 }
