@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/pages/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,27 +18,8 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-       home: todoapp(),
+       home: homepage(),
     );
   }
 }
-
-
-class todoapp extends StatelessWidget {
-
-  const todoapp({ Key? key }) : super(key: key);
-
-   @override
-   Widget build(BuildContext context) {
-       return Scaffold(
-           appBar: AppBar(
-            backgroundColor: Colors.white,
-            title: Text('Todo App',
-            
-            ),),
-           body: Container(),
-       );
-  }
-}
-
 
