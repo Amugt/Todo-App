@@ -21,7 +21,7 @@ class _addtodoDialogState extends State<addtodoDialog> {
    content: Column(
     mainAxisAlignment: MainAxisAlignment.start,
     children: [
-      Text("add todo",
+      Text("Add todo",
       style: TextStyle(
         fontSize: 21,
      
@@ -29,6 +29,7 @@ class _addtodoDialogState extends State<addtodoDialog> {
       ),
       const SizedBox(height: 7),
       todoform(
+        
         onChangedTitle:(title)=> setState(()  => this.title=title),
         onChangedDescription:(description )=> setState(()  => this.description =description),
          onsave: (String value) {  }, key: null,
