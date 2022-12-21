@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:todo_app/widgets/todoform.dart';
+
 
 
 class addtodoDialog extends StatefulWidget {
@@ -18,7 +21,12 @@ class _addtodoDialogState extends State<addtodoDialog> {
   Widget build(BuildContext context) {
     var key = null;
     return AlertDialog(
-   content: Column(
+   
+
+ content:Container(
+  height: 290,
+  child:Column(
+    
     mainAxisAlignment: MainAxisAlignment.start,
     children: [
       Text("Add todo",
@@ -32,11 +40,18 @@ class _addtodoDialogState extends State<addtodoDialog> {
         
         onChangedTitle:(title)=> setState(()  => this.title=title),
         onChangedDescription:(description )=> setState(()  => this.description =description),
-         onsave: (String value) {  }, key: null,
+         onsave: () {  }, key: null,
         ),
        
 
     ],
    ),
+ )
+
+
+
+
+
+  
   );
   }}
